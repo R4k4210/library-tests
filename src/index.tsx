@@ -3,13 +3,15 @@ import { Web3ContextProvider } from "react-dapp-web3";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import providers from "./constants/providersConfigs";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <Web3ContextProvider>
+    <Web3ContextProvider config={providers}>
       <App />
     </Web3ContextProvider>
   </React.StrictMode>
