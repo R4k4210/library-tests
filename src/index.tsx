@@ -1,12 +1,12 @@
-import React from "react";
 import { Web3ContextProvider } from "react-dapp-web3";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import providers from "./constants/providersConfigs";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 
 root.render(
@@ -14,7 +14,7 @@ root.render(
     <Web3ContextProvider config={providers}>
       <App />
     </Web3ContextProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -17,7 +17,6 @@
     "os-browserify": "^0.3.0",
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
-    "react-dapp-web3": "^2.2.5",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "stream-browserify": "^3.0.0",
@@ -49,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
   }
 }

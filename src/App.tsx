@@ -1,7 +1,6 @@
-import { useWeb3 } from "react-dapp-web3";
-import HOCTest from "./HOCTest";
+import { useWeb3, EWalletProviders } from "react-dapp-web3";
 
-function App() {
+const App = () => {
   const { walletAddress, connect, chainId, disconnect, signMessage } =
     useWeb3();
 
@@ -15,16 +14,24 @@ function App() {
       <h2>Test del hook</h2>
       <p>Wallet Address: {walletAddress}</p>
       <p>Chain ID: {chainId}</p>
-      <button onClick={connect}>Connect</button>
+      <button onClick={() => connect(EWalletProviders.METAMASK)}>
+        Metamask
+      </button>
+      <br />
+      <button onClick={() => connect(EWalletProviders.WALLET_CONNECT_V2)}>
+        Wallet Connect
+      </button>
+      <br />
+      <button onClick={() => connect(EWalletProviders.COINBASE)}>
+        Coinbase
+      </button>
+      <br />
       <button onClick={disconnect}>Disconnect</button>
       <button onClick={sign}>Sign</button>
-
       <br />
       <br />
-
-      <HOCTest title="Test del HOC" />
     </div>
   );
-}
+};
 
 export default App;
